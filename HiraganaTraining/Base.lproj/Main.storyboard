@@ -1,24 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro Veiw Controller Scene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Intro Veiw Controller Scene" customClass="ViewController" customModule="HiraganaTraining" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="JPA-QA-aV9">
+                                <rect key="frame" x="0.0" y="179.5" width="414" height="577.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana Training✌️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akn-5S-Iyr">
+                                        <rect key="frame" x="83" y="0.0" width="248.5" height="137"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="57"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="awW-3D-WUM">
+                                        <rect key="frame" x="0.0" y="217" width="414" height="90.5"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" minimumValueImage="tray" catalog="system" maximumValueImage="tray.full.fill" translatesAutoresizingMaskIntoConstraints="NO" id="Fue-tg-sLv">
+                                                <rect key="frame" x="28" y="0.0" width="358" height="31"/>
+                                                <connections>
+                                                    <action selector="isSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="7mI-e3-3Mu"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0g-y4-Ui1">
+                                                <rect key="frame" x="188.5" y="40" width="37.5" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Fue-tg-sLv" secondAttribute="trailing" constant="30" id="HiL-fJ-6wp"/>
+                                            <constraint firstItem="Fue-tg-sLv" firstAttribute="leading" secondItem="awW-3D-WUM" secondAttribute="leading" constant="30" id="eqb-qx-rCO"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-Ef-2Fs">
+                                        <rect key="frame" x="169.5" y="387.5" width="75" height="75"/>
+                                        <state key="normal" image="start-button"/>
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJF-0G-C0x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-P2-agW">
+                                        <rect key="frame" x="152" y="542.5" width="110" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="How to play?"/>
+                                        <connections>
+                                            <segue destination="a4T-Wd-kK7" kind="presentation" id="50n-EY-oFt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="awW-3D-WUM" firstAttribute="leading" secondItem="JPA-QA-aV9" secondAttribute="leading" id="Cv0-9B-QBX"/>
+                                    <constraint firstAttribute="trailing" secondItem="awW-3D-WUM" secondAttribute="trailing" id="QUn-TV-YjD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JPA-QA-aV9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5j3-6a-wiu"/>
+                            <constraint firstItem="JPA-QA-aV9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RvK-HB-Ub9"/>
+                            <constraint firstAttribute="trailing" secondItem="JPA-QA-aV9" secondAttribute="trailing" id="Vsc-vB-5Ac"/>
+                            <constraint firstItem="JPA-QA-aV9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="n0n-wv-cqb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="Fue-tg-sLv" id="1Mc-Nw-R8h"/>
+                        <outlet property="valueLabel" destination="d0g-y4-Ui1" id="7gJ-v8-Z3t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jMo-Iq-inw">
+            <objects>
+                <viewController id="a4T-Wd-kK7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8mC-Ec-9y3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explaining How to play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-4F-elt">
+                                <rect key="frame" x="99.5" y="408" width="215" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="J3m-4F-elt" firstAttribute="centerX" secondItem="8mC-Ec-9y3" secondAttribute="centerX" id="cv6-mF-MJg"/>
+                            <constraint firstItem="J3m-4F-elt" firstAttribute="centerY" secondItem="8mC-Ec-9y3" secondAttribute="centerY" id="vbT-Gm-PPz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FMN-wG-3cp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUv-9U-FrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start-button" width="75" height="75"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
+    </resources>
 </document>

@@ -1,3 +1,3 @@
-# swift-hiragana-traning
+# swift-hiragana-training
 
-simple ios app for training hiragana
+simple ios app for training hiragana （ひらがな）

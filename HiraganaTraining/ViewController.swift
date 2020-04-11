@@ -15,6 +15,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    // Add IB Outlets
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var valueLabel: UILabel!
+    
+    // when slider move
+    @IBAction func isSliderMoved(_ sender: Any) {
+        let questionCount:Int = Int(slider.value)
+        valueLabel.text = String(questionCount)
+    }
+    
+    @IBAction func startButton(_ sender: Any) {
+        //Go to the Start
+    }
+    
 }
 
