@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Intro Veiw Controller Scene-->
+        <!--Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Intro Veiw Controller Scene" customClass="ViewController" customModule="HiraganaTraining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroViewController" id="BYZ-38-t0r" userLabel="Intro View Controller" customClass="IntroViewController" customModule="HiraganaTraining" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <state key="normal" title="How to play?"/>
                                         <connections>
-                                            <segue destination="a4T-Wd-kK7" kind="presentation" id="50n-EY-oFt"/>
+                                            <segue destination="a4T-Wd-kK7" kind="presentation" id="nfV-Lb-Kpp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,7 +67,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JPA-QA-aV9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5j3-6a-wiu"/>
                             <constraint firstItem="JPA-QA-aV9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RvK-HB-Ub9"/>
@@ -76,6 +76,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="never" id="ckk-tn-xdO"/>
                     <connections>
                         <outlet property="slider" destination="Fue-tg-sLv" id="1Mc-Nw-R8h"/>
                         <outlet property="valueLabel" destination="d0g-y4-Ui1" id="7gJ-v8-Z3t"/>
@@ -83,12 +84,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Training View Controller-->
+        <scene sceneID="sek-1M-MgJ">
+            <objects>
+                <viewController storyboardIdentifier="TrainingViewController" id="wa6-Rk-roK" userLabel="Training View Controller" customClass="TrainingViewController" customModule="HiraganaTraining" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxj-cj-HvP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFV-5Y-TKI">
+                                <rect key="frame" x="194.5" y="424.5" width="25" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWP-dW-DE2">
+                                <rect key="frame" x="20" y="49" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="AdA-YX-zfh"/>
+                                    <constraint firstAttribute="height" constant="25" id="f1Q-YY-7JP"/>
+                                </constraints>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qFV-5Y-TKI" firstAttribute="centerX" secondItem="gxj-cj-HvP" secondAttribute="centerX" id="0iG-Gu-EjR"/>
+                            <constraint firstItem="cWP-dW-DE2" firstAttribute="leading" secondItem="kro-u2-XsZ" secondAttribute="leading" constant="20" id="lxE-Ef-Pk8"/>
+                            <constraint firstItem="qFV-5Y-TKI" firstAttribute="centerY" secondItem="gxj-cj-HvP" secondAttribute="centerY" id="ohI-1a-N3L"/>
+                            <constraint firstItem="cWP-dW-DE2" firstAttribute="top" secondItem="kro-u2-XsZ" secondAttribute="top" constant="5" id="xeZ-f4-xwI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kro-u2-XsZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Ww-Lx-s1S"/>
+                    <connections>
+                        <outlet property="QuestionCntLabel" destination="qFV-5Y-TKI" id="O29-va-Gle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNS-BF-2kX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792.753623188406" y="137.94642857142856"/>
+        </scene>
+        <!--Help View Controller-->
         <scene sceneID="jMo-Iq-inw">
             <objects>
-                <viewController id="a4T-Wd-kK7" sceneMemberID="viewController">
+                <viewController id="a4T-Wd-kK7" userLabel="Help View Controller" customClass="HelpViewContoller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mC-Ec-9y3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,15 +151,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FMN-wG-3cp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="J0P-ug-NmR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUv-9U-FrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="138"/>
+            <point key="canvasLocation" x="1116" y="138"/>
         </scene>
     </scenes>
     <resources>
         <image name="start-button" width="75" height="75"/>
         <image name="tray" catalog="system" width="128" height="88"/>
         <image name="tray.full.fill" catalog="system" width="128" height="88"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class MainTraining:UIViewController{
+class TrainingViewController:UIViewController{
     
     @IBOutlet weak var QuestionCntLabel: UILabel!
-    var QuestionCount:Int?
+    var maxQuestion:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        QuestionCntLabel.text = "\(QuestionCount)"
+        QuestionCntLabel.text = "\(maxQuestion!)"
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IntroVC : UIViewController {
+class IntroViewController : UIViewController {
 
     // Add IB Outlets
     @IBOutlet weak var slider: UISlider!
@@ -20,29 +20,27 @@ class IntroVC : UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var questionCount:Int = 15
+    var sliderValue:Int = 15
     
     // when slider move
     @IBAction func isSliderMoved(_ sender: Any) {
-        questionCount = Int(slider.value)
-        valueLabel.text = String(questionCount)
+        sliderValue = Int(slider.value)
+        valueLabel.text = String(sliderValue)
     }
     
     @IBAction func startButton(_ sender: Any) {
-      //  self.navigationController?.pushViewController(TrainingVC, animated: true)
-        toTraningVC()
+        toTraningViewController()
     }
     
-    private func toTraningVC(){
+    private func toTraningViewController(){
         
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        guard let MainTraining = mainStoryBoard.instantiateViewController(identifier: "MainTraining") as? MainTraining else { return }
+        guard let trainingVC = mainStoryBoard.instantiateViewController(identifier: "TrainingViewController") as? TrainingViewController else { return }
         
+        trainingVC.maxQuestion = sliderValue
         
-        MainTraining.QuestionCount = questionCount
-        
-        present(MainTraining, animated: true, completion: nil)
+        present(trainingVC, animated: true, completion: nil)
     }
     
 }
