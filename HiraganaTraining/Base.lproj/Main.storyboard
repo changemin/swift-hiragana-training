@@ -215,6 +215,9 @@
                                 <rect key="frame" x="178.5" y="652.5" width="57" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="retryButton:" destination="ZsX-br-dle" eventType="touchUpInside" id="w0D-yh-jp3"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1XD-9v-gB8">
                                 <rect key="frame" x="106" y="284" width="202.5" height="268.5"/>
@@ -249,6 +252,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b70-Gd-iZm"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="nNx-fS-H9c" id="R1Q-mc-vz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaB-3c-i4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

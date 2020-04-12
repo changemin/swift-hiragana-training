@@ -30,7 +30,6 @@ class TrainingViewController:UIViewController{
     var progressCnt = 1
     var answerBtn = 0
     var score = 0
-    var answerCnt = 0
     
     func generateQuestion() {
         while checkOverlap() != 4{
@@ -66,7 +65,7 @@ class TrainingViewController:UIViewController{
     
     func answerCheck(submitted userSelected:Int,answer ans:Int){
         if userSelected == ans{
-            answerCnt += 1
+            score += 1
             print("correct")
         }
         else {
