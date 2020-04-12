@@ -18,49 +18,74 @@ class TrainingViewController:UIViewController{
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Submitted(answer: -1)
+        // 초기 리셋
+    }
+    
     var questionN = 0
     var btn = [0,0,0,0]
     var maxQuestion:Int?
-    var progressCnt = 0
+    var progressCnt = 1
     
     func generateQuestion() {
-        questionN = Int.random(in: 1...50)
+        questionN = Int.random(in: 1...46)
         for index in 0...3{
-            btn[index] = Int.random(in: 1...4)
+            btn[index] = Int.random(in: 1...46)
         }
     }
     
     func ObjectsUpdate(){
-        question.text = String(questionN)
-        btn1.setTitle(String(btn[0]), for: .normal)
-        btn2.setTitle(String(btn[1]), for: .normal)
-        btn3.setTitle(String(btn[2]), for: .normal)
-        btn4.setTitle(String(btn[3]), for: .normal)
-        
+        question.text = DICTIONARY_IDX_HIRAGANA[questionN]!
+        btn1.setTitle(DICTIONARY_IDX_PRONOUNCE[btn[0]]!, for: .normal)
+        btn2.setTitle(DICTIONARY_IDX_PRONOUNCE[btn[1]]!, for: .normal)
+        btn3.setTitle(DICTIONARY_IDX_PRONOUNCE[btn[2]]!, for: .normal)
+        btn4.setTitle(DICTIONARY_IDX_PRONOUNCE[btn[3]]!, for: .normal)
         progressBar.progress = progressCal()
     }
     
-    func progressCal()->Float{
-        return (progressCnt/maxQuestion)
+    func answerCheck(submitted userSelected:Int,answer ans:Int) -> Int{
+        return 0
     }
     
-    func Submitted(){
+    func progressCal() -> Float{
+        let percent = Float(progressCnt)/Float(maxQuestion!+1)
+        if percent >= 1 {
+            endExam()
+        }
+        return percent
+    }
+    
+    func Submitted(answer userSelected:Int){
+        if userSelected == -1 {
+            generateQuestion()
+            ObjectsUpdate()
+            return
+        }
         progressCnt += 1
+        print(answerCheck(submitted:userSelected, answer:questionN))
         generateQuestion()
         ObjectsUpdate()
     }
     
+    func endExam(){
+        // Go to the score
+        print("Exam ended!")
+    }
     
     @IBAction func Button1(_ sender: Any) {
-        Submitted()
+        Submitted(answer:1)
     }
     @IBAction func Button2(_ sender: Any) {
-        Submitted()
+        Submitted(answer:2)
     }
     @IBAction func Button3(_ sender: Any) {
-        Submitted()
+        Submitted(answer:3)
     }
     @IBAction func Button4(_ sender: Any) {
-        Submitted()
+        Submitted(answer:4)
     }
 }
