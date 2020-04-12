@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4239F37F24427A0A00FC0AF5 /* DICTIONARY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239F37E24427A0A00FC0AF5 /* DICTIONARY.swift */; };
+		4239F3812442E46400FC0AF5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239F3802442E46400FC0AF5 /* ResultViewController.swift */; };
 		42FCCDA624421B6300CBA602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FCCDA524421B6300CBA602 /* AppDelegate.swift */; };
 		42FCCDA824421B6300CBA602 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FCCDA724421B6300CBA602 /* SceneDelegate.swift */; };
 		42FCCDAA24421B6300CBA602 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FCCDA924421B6300CBA602 /* IntroViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		4239F37E24427A0A00FC0AF5 /* DICTIONARY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DICTIONARY.swift; sourceTree = "<group>"; };
+		4239F3802442E46400FC0AF5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		42FCCDA224421B6300CBA602 /* HiraganaTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiraganaTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FCCDA524421B6300CBA602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FCCDA724421B6300CBA602 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,11 +109,12 @@
 				42FCCDA724421B6300CBA602 /* SceneDelegate.swift */,
 				42FCCDA924421B6300CBA602 /* IntroViewController.swift */,
 				42FCCDD5244248EE00CBA602 /* TrainingViewController.swift */,
+				4239F3802442E46400FC0AF5 /* ResultViewController.swift */,
+				4239F37E24427A0A00FC0AF5 /* DICTIONARY.swift */,
 				42FCCDAB24421B6300CBA602 /* Main.storyboard */,
-				42FCCDAE24421B6500CBA602 /* Assets.xcassets */,
 				42FCCDB024421B6500CBA602 /* LaunchScreen.storyboard */,
 				42FCCDB324421B6500CBA602 /* Info.plist */,
-				4239F37E24427A0A00FC0AF5 /* DICTIONARY.swift */,
+				42FCCDAE24421B6500CBA602 /* Assets.xcassets */,
 			);
 			path = HiraganaTraining;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				42FCCDA624421B6300CBA602 /* AppDelegate.swift in Sources */,
 				42FCCDD6244248EE00CBA602 /* TrainingViewController.swift in Sources */,
 				42FCCDA824421B6300CBA602 /* SceneDelegate.swift in Sources */,
+				4239F3812442E46400FC0AF5 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
